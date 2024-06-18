@@ -6,7 +6,7 @@ source as (
 
 ),
 
-renamed as (
+sales as (
 
     select
         date_date,
@@ -19,4 +19,4 @@ renamed as (
 
 )
 
-select * from renamed
+select * from sales

@@ -6,7 +6,7 @@ source as (
 
 ),
 
-renamed as (
+prod as (
 
     select
         products_id,
@@ -16,4 +16,4 @@ renamed as (
 
 )
 
-select * from renamed
+select * from prod
