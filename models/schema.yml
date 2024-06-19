@@ -11,7 +11,7 @@ sources :
           warn_after:
             count: 90
             period: day
-        loaded_at_field: date_date 
+        loaded_at_field: "cast(date_date as TIMESTAMP)"
         
         columns: 
           - name: date_date
