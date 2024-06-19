@@ -7,8 +7,8 @@ round(sum(purchase_cost),2) as purchase_cost,
 round(sum(margin),2) as margin
 
 FROM {{ref('int_sales_margin')}}
-GROUP BY
-date_date,
-orders_id
+GROUP BY orders_id,
+date_date
+
 HAVING orders_id = 1002561
 ORDER BY date_date
