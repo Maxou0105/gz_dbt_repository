@@ -70,10 +70,16 @@ sources :
             description: nom de campagne
           - name: ads_cost
             description: cout de campagne
+            tests:
+              - not_null      
           - name: impression
             description: nb d'ouverture de mail
+            tests:
+              - not_null
           - name: click
             description: nb de click 
+            tests:
+              - not_null
             
       - name: bing #Alias dbt
         identifier: gz_bing #name bigquery
@@ -91,10 +97,16 @@ sources :
             description: nom de campagne
           - name: ads_cost
             description: cout de campagne
+            tests:
+              - not_null      
           - name: impression
             description: nb d'ouverture de mail
+            tests:
+              - not_null
           - name: click
             description: nb de click 
+            tests:
+              - not_null
 
       - name: criteo #Alias dbt
         identifier: gz_criteo #name bigquery
@@ -112,10 +124,16 @@ sources :
             description: nom de campagne
           - name: ads_cost
             description: cout de campagne
+            tests:
+              - not_null      
           - name: impression
             description: nb d'ouverture de mail
+            tests:
+              - not_null
           - name: click
             description: nb de click 
+            tests:
+              - not_null
 
       - name: facebook #Alias dbt
         identifier: gz_facebook #name bigquery
@@ -133,7 +151,13 @@ sources :
             description: nom de campagne
           - name: ads_cost
             description: cout de campagne
+            tests:
+              - not_null      
           - name: impression
             description: nb d'ouverture de mail
+            tests:
+              - not_null
           - name: click
             description: nb de click 
+            tests:
+              - not_null
