@@ -1,3 +1,4 @@
+
 SELECT 
 date_date,
 round(sum(revenue),1) as revenue,
