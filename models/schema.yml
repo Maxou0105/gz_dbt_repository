@@ -64,6 +64,9 @@ sources :
             description: source
           - name: campaign_key
             description: clé primaire
+            tests:
+              - unique
+              - not_null
           - name: campaign_name
             description: nom de campagne
           - name: ads_cost
@@ -83,6 +86,9 @@ sources :
             description: source
           - name: campaign_key
             description: clé primaire
+            tests:
+              - unique
+              - not_null
           - name: campaign_name
             description: nom de campagne
           - name: ads_cost
@@ -102,6 +108,9 @@ sources :
             description: source
           - name: campaign_key
             description: clé primaire
+            tests:
+              - unique
+              - not_null
           - name: campaign_name
             description: nom de campagne
           - name: ads_cost
@@ -121,6 +130,9 @@ sources :
             description: source
           - name: campaign_key
             description: clé primaire
+            tests:
+              - unique
+              - not_null
           - name: campaign_name
             description: nom de campagne
           - name: ads_cost
