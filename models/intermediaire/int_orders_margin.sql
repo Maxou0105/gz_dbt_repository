@@ -10,5 +10,5 @@ FROM {{ref('int_sales_margin')}}
 GROUP BY orders_id,
 date_date
 
-HAVING orders_id = 1002561
+
 ORDER BY date_date
