@@ -53,4 +53,79 @@ sources :
           description: cout de logistique
         - name: ship_cost
           description: frais de livraison
+
+      - name: adwords #Alias dbt
+        identifier: gz_adwords #name bigquery
+        description: cout par campagne
+        columns:
+          - name: date_date
+            description: date de la campagne
+          - name: paid_source
+            description: source
+          - name: campaign_key
+            description: clé primaire
+          - name: campaign_name
+            description: nom de campagne
+          - name: ads_cost
+            description: cout de campagne
+          - name: impression
+            description: nb d'ouverture de mail
+          - name: click
+            description: nb de click
             
+      - name: bing #Alias dbt
+        identifier: gz_bing #name bigquery
+        description: cout par campagne bing
+        columns:
+          - name: date_date
+            description: date de la campagne
+          - name: paid_source
+            description: source
+          - name: campaign_key
+            description: clé primaire
+          - name: campaign_name
+            description: nom de campagne
+          - name: ads_cost
+            description: cout de campagne
+          - name: impression
+            description: nb d'ouverture de mail
+          - name: click
+            description: nb de click 
+
+      - name: criteo #Alias dbt
+        identifier: gz_criteo #name bigquery
+        description: cout par campagne criteo
+        columns:
+          - name: date_date
+            description: date de la campagne
+          - name: paid_source
+            description: source
+          - name: campaign_key
+            description: clé primaire
+          - name: campaign_name
+            description: nom de campagne
+          - name: ads_cost
+            description: cout de campagne
+          - name: impression
+            description: nb d'ouverture de mail
+          - name: click
+            description: nb de click 
+
+      - name: facebook #Alias dbt
+        identifier: gz_facebook #name bigquery
+        description: cout par campagne facebook
+        columns:
+          - name: date_date
+            description: date de la campagne
+          - name: paid_source
+            description: source
+          - name: campaign_key
+            description: clé primaire
+          - name: campaign_name
+            description: nom de campagne
+          - name: ads_cost
+            description: cout de campagne
+          - name: impression
+            description: nb d'ouverture de mail
+          - name: click
+            description: nb de click 
