@@ -1,0 +1,56 @@
+version: 2
+sources :
+  - name: raw
+    schema: gz_raw_data
+    description : greenweez data source
+    tables:
+      - name : sales #Alias on sales table
+        identifier : gz_sales #Name on Bigquery
+        description : nombre de produit vendu par date et revenue associé
+        freshness:
+          warn_after:
+            count: 90
+            period: day
+        loaded_at_field: "cast(date_date as TIMESTAMP)"
+        
+        columns: 
+          - name: date_date
+            description: date commande
+          - name: orders_id
+            description: num de commande
+          - name: product_id
+            description: num de produit
+          - name: revenue 
+            description: prix de vente
+          - name: qty
+            description: nb de produits vendus
+            
+
+      - name : products #Alias on products table
+        identifier : gz_product #Name on Bigquery
+        description : prix d'achat par produit
+        columns:
+          - name: products_id
+            description: clé primaire 
+            tests:
+              - unique
+              - not_null
+          - name: purchase_price
+            description: prix d'achat produit
+
+      - name: ship #Alias on ship table
+        identifier: gz_ship #Name on Bigquery
+        description: cout de livraison des commandes
+        columns: 
+        - name: orders_id
+          description : test de clé primaire 
+          tests:
+            - unique
+            - not_null
+        - name: shipping_fee
+          description: frais paye par le client
+        - name: logcost
+          description: cout de logistique
+        - name: ship_cost
+          description: frais de livraison
+            
