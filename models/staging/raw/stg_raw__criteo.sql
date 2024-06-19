@@ -8,14 +8,23 @@ source as (
 
 renamed as (
 
-    select
+   select
         date_date,
         paid_source,
         campaign_key,
         campgn_name as campaign_name,
-        CAST(ads_cost AS FLOAT64) AS ads_cost,
-        impression,
-        click
+        CASE
+        WHEN cast(ads_cost as FLOAT64) is null THEN 0
+        ELSE cast(ads_cost as FLOAT64)
+        END as ads_cost,
+        CASE
+        WHEN impression is null THEN 0
+        ELSE impression
+        END as impression,
+        CASE
+        WHEN click is null THEN 0
+        ELSE click
+        END as click
 
     from source
 
